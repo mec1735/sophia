@@ -1,0 +1,122 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background: none;
+    color: #fff;
+}
+
+/* FUNDO */
+.background-animation {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background-image:
+        url("planodefundo.png"),
+        radial-gradient(circle at 20% 50%, rgba(212,165,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(26,127,217,0.15), transparent 60%);
+
+    background-size: cover;
+    background-position: center;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* NEVE */
+.snow::before,
+.snow::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(1.5px 1.5px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 100px 150px, white, transparent),
+        radial-gradient(1.5px 1.5px at 300px 80px, white, transparent);
+
+    background-size: 400px 400px;
+    animation: snow 25s linear infinite;
+}
+
+.snow::after {
+    opacity: 0.5;
+    animation-duration: 35s;
+}
+
+@keyframes snow {
+    from { transform: translateY(-10%); }
+    to { transform: translateY(110%); }
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* TÍTULOS */
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #cfe2ff;
+}
+
+/* IMAGEM */
+.birthday-image {
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 50px 0;
+    border: 3px solid #fff;
+}
+
+/* CARDS */
+.info-card,
+.confirmation-section,
+.qrcode-box {
+    background: rgba(0,0,0,0.35);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(8px);
+}
+
+/* BOTÕES */
+.location-button,
+.confirmation-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #4d94ff, #d4a5ff);
+    color: #001a4d;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 60px;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    padding-top: 30px;
+}
