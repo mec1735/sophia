@@ -58,8 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     atualizar();
 
     /* >>>>> AQUI ESTÁ A MUDANÇA QUE VOCÊ PEDIU <<<<< */
-    document.querySelector('.confirmation-button').href =
-        'confirmacao/index.html';
+    
 
     document.querySelector('.location-button').href =
         'https://maps.google.com/?q=-15.995706,-49.128273';
