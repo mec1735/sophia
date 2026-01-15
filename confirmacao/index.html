@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmação de Presença</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FUNDO -->
+  <div class="background"></div>
+
+  <!-- NEVE -->
+  <canvas id="snow"></canvas>
+
+  <!-- CONTEÚDO NO TOPO -->
+  <main class="content">
+
+    <header class="hero-text">
+      <h1>Confirmação de Presença</h1>
+      <h2>Celebração dos 13 Anos de Sophia</h2>
+    </header>
+
+    <section class="card">
+
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdB2g51iYrlRvy8i5vjETTh8JhsDjOaEnmrezuoQZUAuLxl0g/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="enviado();"
+      >
+
+        <label>Nome completo do convidado(a)</label>
+        <input
+          type="text"
+          name="entry.966424934"
+          placeholder="Digite seu nome"
+          required
+        >
+
+        <label>Quantidade de pessoas (incluindo você)</label>
+        <input
+          type="number"
+          name="entry.985275573"
+          min="1"
+          placeholder="Ex: 2"
+          required
+        >
+
+        <div class="notice">
+          ⚠️ <strong>IMPORTANTE</strong><br><br>
+          Caso adultos optem por consumir bebidas alcoólicas,
+          pedimos gentilmente que <u>tragam a sua própria bebida</u>.
+        </div>
+
+        <button type="submit">Confirmar Presença</button>
+      </form>
+
+      <p class="success" id="msg">Presença confirmada ✨</p>
+
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
